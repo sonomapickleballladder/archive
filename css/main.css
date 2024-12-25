@@ -1,7 +1,6 @@
 :root {
     --bg: auto;
     --fg: auto;
-    --link: auto;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -10,13 +9,13 @@
         --fg: #ffeecc;
         --link: #48b7f9;
     }
+    
+    a {
+        color: var(--link);
+    }
 }
 
 body {
     background-color: var(--bg);
     color: var(--fg);
-}
-
-a {
-    color: var(--link);
 }
