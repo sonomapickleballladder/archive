@@ -1,0 +1,22 @@
+:root {
+    --bg: auto;
+    --fg: auto;
+    --link: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #1c1b22;
+        --fg: #ffeecc;
+        --link: #48b7f9;
+    }
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+a {
+    color: var(--link);
+}

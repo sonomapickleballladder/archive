@@ -1,0 +1,23 @@
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+td, th {
+border: 3px ridge #777777 !important;
+text-align: left !important;
+padding: 8px !important;
+}
+
+tr:nth-child(even) {
+background-color: rgba(155, 100, 100, 0.3);
+}
+
+a.highlight {
+color: #039d05!important;
+}
+
+a.standard {
+color: rgb(59, 74, 187)!important
+}
