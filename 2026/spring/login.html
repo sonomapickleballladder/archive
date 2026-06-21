@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" hidden>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, maximum-scale=1.0, initial-scale=1.0"
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Login | Sonoma Pickleball Ladder</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <script src="js/ladder.js"></script>
+    <script src="js/lzstring.js"></script>
+    <script src="js/supabase-js.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/login.js"></script>
+  </head>
+  <body>
+    <div class="modal login">
+      <center>
+        <div><h1>Login</h1></div>
+
+        <div class="lg_input">
+          <input
+            class="lg_actual_input"
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            autofocus
+          />
+        </div>
+        <div class="lg_input">
+          <input
+            class="lg_actual_input"
+            type="password"
+            id="key"
+            placeholder="Secret Key"
+          /><i
+            id="vbtoggle"
+            style="
+              position: absolute;
+              transform: translate(-175%, 27.5%) scale(1);
+              cursor: default;
+            "
+            onclick="showpskey(this)"
+            >👁️</i
+          >
+        </div>
+        <div class="lg_input">
+          <button
+            id="submit"
+            class="lg_actual_input"
+            onclick="authorize({email: byId('email').value, key: byId('key').value})"
+          >
+            Submit
+          </button>
+        </div>
+        <div class="lg_input">
+          <a target="_blank" href="faq.html#secret-key"
+            >I forgot my secret key.</a
+          >
+        </div>
+        <!-- <div class="lg_input"><a href="mailto:SPLinfo@riseup.net?Subject=Spring Ladder | Login Credentials&body=Hi Theo,%0AI have forgotten my secret key. Could you send me a magic link?%0AThanks,%0AYour name">I forgot my secret key.</a></div> -->
+
+        <div class="lg_input" style="max-width: 100%">
+          <span id="message"></span>
+        </div>
+      </center>
+    </div>
+
+    <script>
+      lsWarning(
+        'Failed to access your browser\'s local storage, which means this page will not work. See <a target="_blank" rel="noreferrer" href="https://mid.as/kb/00103/enable-disable-or-clear-web-storage-cache">here</a> for info about how to enable local storage.',
+      );
+    </script>
+    <script src="js/pls.js"></script>
+  </body>
+</html>
